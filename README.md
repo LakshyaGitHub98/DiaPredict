@@ -78,7 +78,9 @@ pip install pandas numpy scikit-learn matplotlib seaborn
 The model will:
 
 . Train
+
 . Print accuracy and classification report
+
 . Save the trained model as .pkl files
 
 files
@@ -118,7 +120,9 @@ This project helped in understanding:
 ### 👨‍💻 Author
 
 Lakshya Tripathi
-https://www.linkedin.com/in/lakshya-tripathi-3b205b295/
+
+📞 https://www.linkedin.com/in/lakshya-tripathi-3b205b295/
+
 BCA Student | Aspiring Full-Stack & AI Developer
 
 ### 📌 Status

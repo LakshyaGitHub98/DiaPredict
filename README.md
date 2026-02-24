@@ -70,8 +70,9 @@ High recall for diabetic cases to reduce false negatives in medical prediction.
 ```bash
 pip install pandas numpy scikit-learn matplotlib seaborn
 
+```
 
-## 2️⃣ Run Model Training
+### 2️⃣ Run Model Training
     python model.py
 
 The model will:
@@ -82,7 +83,7 @@ The model will:
 
 files
 
-## 🔮 Future Improvements
+### 🔮 Future Improvements
 
 . Implement Random Forest / Ensemble Models
 
@@ -97,7 +98,7 @@ files
 . Deploy on cloud platform
 
 
-## 🎯 Learning Outcome
+### 🎯 Learning Outcome
 
 This project helped in understanding:
 
@@ -114,13 +115,13 @@ This project helped in understanding:
 . Practical ML Implementation
 
 
-## 👨‍💻 Author
+### 👨‍💻 Author
 
 Lakshya Tripathi
-
+https://www.linkedin.com/in/lakshya-tripathi-3b205b295/
 BCA Student | Aspiring Full-Stack & AI Developer
 
-# 📌 Status
+### 📌 Status
 
 🟢 Phase 1 Complete – Model Training
 🟡 Phase 2 – API Integration (In Progress)

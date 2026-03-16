@@ -10,28 +10,30 @@ app = Flask(__name__)
 try:
     model = pickle.load(open("diabetes_model.pkl", "rb"))
     scaler = pickle.load(open("scaler.pkl", "rb"))
+    print("Model and scaler loaded successfully")
 except Exception as e:
     print("Error loading model or scaler:", e)
 
+
 # ----------------------------
-# # Home route (GET)
-# # ----------------------------
-# @app.route("/", methods=["GET"])
-# def home():
-#     return jsonify({
-#         "message": "Welcome to the Diabetes Prediction API! Use POST /predict with features to get prediction."
-#     })
+# Health check route
+# ----------------------------
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "message": "DiaPredict ML API is running"
+    })
 
 
 # ----------------------------
-# Prediction route (POST)
+# Prediction route
 # ----------------------------
 @app.route("/predict", methods=["POST"])
 def predict():
     try:
         data = request.get_json()
 
-        if "features" not in data:
+        if not data or "features" not in data:
             return jsonify({"message": "Missing 'features' in request body"}), 400
 
         features = np.array(data["features"]).reshape(1, -1)
@@ -54,7 +56,7 @@ def predict():
 
 
 # ----------------------------
-# Run Flask
+# Local development only
 # ----------------------------
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)  # Flask port 5001, Node backend port 5000
+    app.run(host="0.0.0.0", port=5001)
